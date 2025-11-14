@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+#agirlik-goruntusu {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#tahtarevalli-kapsayici {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background: linear-gradient(to bottom, #87CEEB, #98FB98);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#destek-sol, #destek-sag {
+    position: absolute;
+    width: 10px;
+    height: 150px;
+    background-color: #8B4513;
+    bottom: 0;
+}
+
+#destek-sol {
+    left: 295px;
+}
+
+#destek-sag {
+    right: 295px;
+}
+
+#tahtarevalli {
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background-color: brown;
+    top: 200px;
+    left: 0;
+    transform-origin: center;
+    transition: transform 0.8s ease-in-out;
+}
+
+#sol-koltuk, #sag-koltuk {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    top: -50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sol-koltuk {
+    left: 100px;
+}
+
+#sag-koltuk {
+    right: 100px;
+}
+
+.agirlik {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    animation: dusme 0.5s ease;
+}
+
+@keyframes dusme {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes drop {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#kontroller {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+}
